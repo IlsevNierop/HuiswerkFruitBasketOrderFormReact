@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Button from "./Button";
 
-function Article({fruitName, fruitCounter, clickHandlerDecrement, clickHandlerIncrement}) {
+function Article({fruitName, fruitCounter, setFruitCounter}) {
 
     return (
         <>
@@ -9,13 +9,13 @@ function Article({fruitName, fruitCounter, clickHandlerDecrement, clickHandlerIn
             <h2>{fruitName}</h2>
                 <button
                     type="button"
-                    onClick={clickHandlerDecrement}
+                    onClick={() => setFruitCounter(fruitCounter -1)}
                     disabled={fruitCounter===0}
                 >-</button>
             {fruitCounter}
                 <button
                     type="button"
-                    onClick={clickHandlerIncrement}
+                    onClick={() => setFruitCounter(fruitCounter +1)}
                 >+</button>
             </article>
             </>
