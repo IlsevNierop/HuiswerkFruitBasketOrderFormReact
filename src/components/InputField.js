@@ -4,7 +4,8 @@ function InputField({type, name, label, validation, register, errors, children})
     return (
         <label htmlFor={`${name}-field`}>
             {label}
-            <input type={type}
+            <input className={errors[name]? "input-field-warning" : "normal"}
+                type={type}
                    id={`${name}-field`}
                    {...register(name, validation)}
 
