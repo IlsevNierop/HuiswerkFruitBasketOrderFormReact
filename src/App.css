@@ -5,19 +5,35 @@ body {
     align-items: center;
 }
 
+
 article {
     display: flex;
     flex-direction: row;
-    border: 1px solid black;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px groove dimgrey;
     border-radius: 10px;
-    gap: 10px;
-    padding: 10px 20px;
+    padding: 5px 30px;
     margin: 20px;
 }
 
-button {
-    padding: 15px;
+.article-active {
+    border: 1px solid #C6370b;
 }
+
+
+article > button {
+    /*height: 24px;*/
+    padding: 4px 4px;
+    font-size: 24px;
+
+}
+
+article button {
+    padding: 10px;
+    margin: 10px;
+}
+
 
 form {
     display: flex;

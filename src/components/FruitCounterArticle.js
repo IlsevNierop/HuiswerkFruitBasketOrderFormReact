@@ -1,12 +1,13 @@
-import React, {useState} from 'react';
-import Button from "./Button";
+import React from 'react';
 
-function Article({fruitName, fruitCounter, setFruitCounter}) {
+function FruitCounterArticle({fruitName, fruitCounter, setFruitCounter}) {
+
 
     return (
         <>
-            <article>
+            <article className = {fruitCounter > 0 ? "article-active" : ""}>
             <h2>{fruitName}</h2>
+                <div>
                 <button
                     type="button"
                     onClick={() => setFruitCounter(fruitCounter -1)}
@@ -17,10 +18,11 @@ function Article({fruitName, fruitCounter, setFruitCounter}) {
                     type="button"
                     onClick={() => setFruitCounter(fruitCounter +1)}
                 >+</button>
+                </div>
             </article>
             </>
 
     );
 }
 
-export default Article;
+export default FruitCounterArticle;

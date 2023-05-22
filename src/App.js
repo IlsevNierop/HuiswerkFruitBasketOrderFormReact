@@ -3,7 +3,7 @@ import {useForm} from 'react-hook-form';
 import './App.css';
 import Button from "./components/Button";
 import InputField from "./components/InputField";
-import Article from "./components/Article";
+import FruitCounterArticle from "./components/FruitCounterArticle";
 
 function App() {
     const [bananaCounter, setBananaCounter] = useState(0);
@@ -28,24 +28,24 @@ function App() {
     return (
         <>
             <h1>Fruitmand bezorgservice</h1>
-            <Article fruitName="🍌 Bananen"
-                     fruitCounter={bananaCounter}
-                     setFruitCounter={setBananaCounter}
-            ></Article>
-            <Article fruitName="🍓 Aardbeien"
-                     fruitCounter={strawberryCounter}
-                     setFruitCounter={setStrawberryCounter}
-            ></Article>
-            <Article fruitName="🍏 Appels"
-                     fruitCounter={appleCounter}
-                     setFruitCounter={setAppleCounter}
-            ></Article>
-            <Article fruitName="🥝 Kiwi's"
-                     fruitCounter={kiwiCounter}
-                     setFruitCounter={setKiwiCounter}
-            ></Article>
+            <FruitCounterArticle fruitName="🍌 Bananen"
+                                 fruitCounter={bananaCounter}
+                                 setFruitCounter={setBananaCounter}
+            ></FruitCounterArticle>
+            <FruitCounterArticle fruitName="🍓 Aardbeien"
+                                 fruitCounter={strawberryCounter}
+                                 setFruitCounter={setStrawberryCounter}
+            ></FruitCounterArticle>
+            <FruitCounterArticle fruitName="🍏 Appels"
+                                 fruitCounter={appleCounter}
+                                 setFruitCounter={setAppleCounter}
+            ></FruitCounterArticle>
+            <FruitCounterArticle fruitName="🥝 Kiwi's"
+                                 fruitCounter={kiwiCounter}
+                                 setFruitCounter={setKiwiCounter}
+            ></FruitCounterArticle>
 
-            <Button
+            <Button className="reset-button"
                 buttonType="button"
                 clickHandler={resetAllFruit}
             >Reset</Button>
