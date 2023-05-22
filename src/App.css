@@ -1,0 +1,84 @@
+.outer-container {
+    display: flex;
+    width: 100%;
+    margin: 1rem;
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 1200px;
+    margin-inline: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.reset-button {
+    width: 100%;
+    padding: 6px;
+}
+
+article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid dimgrey;
+    border-radius: 10px;
+    padding: 5px 30px;
+    margin: 20px 0;
+}
+
+.article-active {
+    border: 1px solid #C6370b;
+}
+
+article button {
+    padding: 10px;
+    margin: 10px;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 316px;
+}
+
+
+label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+input {
+    border: 1px solid dimgrey;
+    border-radius: 3px;
+}
+
+.radio-button {
+    display: flex;
+    flex-direction: row;
+}
+
+.input-field-warning {
+    border: 1px solid crimson;
+    border-radius: 3px;
+}
+
+p {
+    margin: 0;
+    color: crimson;
+    text-align: start;
+    font-size: 14px;
+}
+
+.send-button {
+    padding: 5px;
+    width: 80px;
+}
